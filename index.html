@@ -1,5 +1,256 @@
 <!doctype html>
-<meta charset="utf-8">
-<title>自己紹介</title>
-<h1>自己紹介</h1>
-<p>授業で作成したページです。</p>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>自己紹介サイト</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Yu Gothic", "Meiryo", sans-serif;
+      background-color: #f4f7fb;
+      color: #333333;
+      line-height: 1.7;
+    }
+
+    header {
+      background-color: #2f80ed;
+      color: white;
+      text-align: center;
+      padding: 45px 20px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    header p {
+      margin-top: 10px;
+      font-size: 1rem;
+    }
+
+    nav {
+      background-color: white;
+      border-bottom: 1px solid #dddddd;
+      position: sticky;
+      top: 0;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 18px;
+      margin: 0;
+      padding: 12px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #2f80ed;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+
+    section {
+      background-color: white;
+      margin-bottom: 25px;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+
+    section h2 {
+      margin-top: 0;
+      color: #2f80ed;
+      border-left: 6px solid #2f80ed;
+      padding-left: 10px;
+    }
+
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 15px;
+    }
+
+    .skill-card {
+      background-color: #eef6ff;
+      padding: 15px;
+      border-radius: 10px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .work-list {
+      padding-left: 20px;
+    }
+
+    .button-area {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    button {
+      background-color: #2f80ed;
+      color: white;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    button:hover {
+      background-color: #1c63b8;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #222222;
+      color: white;
+      font-size: 0.9rem;
+    }
+
+    .dark-mode {
+      background-color: #1e1e1e;
+      color: #eeeeee;
+    }
+
+    .dark-mode nav,
+    .dark-mode section {
+      background-color: #2b2b2b;
+      color: #eeeeee;
+    }
+
+    .dark-mode .skill-card {
+      background-color: #3a3a3a;
+    }
+
+    .dark-mode footer {
+      background-color: #111111;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        padding: 35px 15px;
+      }
+
+      header h1 {
+        font-size: 1.6rem;
+      }
+
+      section {
+        padding: 18px;
+      }
+
+      nav ul {
+        gap: 12px;
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>自己紹介サイト</h1>
+    <p>情報工学を学ぶ学生のポートフォリオページです</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#works">Works</a></li>
+      <li><a href="#reflection">Reflection</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section id="about">
+      <h2>About</h2>
+      <p>
+        私は情報工学を学んでおり、プログラミングやWeb制作、ソフトウェア開発に関心があります。
+        授業では、HTML、CSS、JavaScriptの基礎や、Git/GitHubを使ったバージョン管理について学んでいます。
+      </p>
+      <p>
+        このページは、GitHub Pagesで公開するために作成した自己紹介用の静的Webサイトです。
+        個人情報を載せすぎないように注意しながら、学習内容や制作物をまとめています。
+      </p>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="skills">
+        <div class="skill-card">HTML</div>
+        <div class="skill-card">CSS</div>
+        <div class="skill-card">JavaScript</div>
+        <div class="skill-card">Git / GitHub</div>
+        <div class="skill-card">Python</div>
+        <div class="skill-card">論理的思考</div>
+      </div>
+    </section>
+
+    <section id="works">
+      <h2>Works</h2>
+      <ul class="work-list">
+        <li>HTMLとCSSを使った自己紹介ページの作成</li>
+        <li>GitHub Desktopを使ったcommitとpushの練習</li>
+        <li>GitHub Pagesを使ったWebサイト公開演習</li>
+        <li>授業課題を通したプログラミング基礎の学習</li>
+      </ul>
+    </section>
+
+    <section id="reflection">
+      <h2>Reflection</h2>
+      <p>
+        今回の演習を通して、Webページを作るだけでなく、GitHubを使って変更履歴を管理し、
+        公開まで行う流れを理解することができました。
+      </p>
+      <p>
+        特に、commitは単なる保存ではなく、作業内容を記録する操作であることが分かりました。
+        今後は、変更内容が分かりやすいcommitメッセージを書くことを意識したいです。
+      </p>
+
+      <div class="button-area">
+        <button id="modeButton">表示モードを切り替える</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 自己紹介サイト</p>
+  </footer>
+
+  <script>
+    const modeButton = document.getElementById("modeButton");
+
+    modeButton.addEventListener("click", function () {
+      document.body.classList.toggle("dark-mode");
+
+      if (document.body.classList.contains("dark-mode")) {
+        modeButton.textContent = "通常モードに戻す";
+      } else {
+        modeButton.textContent = "表示モードを切り替える";
+      }
+    });
+  </script>
+</body>
+</html>
